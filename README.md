@@ -4,7 +4,7 @@
 A cross-platform real-time location sharing application built for Web and Android. Users log in via Google OAuth, share live GPS coordinates, and view all online participants as interactive markers synced instantly across every connected device.
 
 ## 📸 Project Screenshots
-![alt text](<Screenshot 2026-06-03 052044-1.png>)
+![alt text](<image.png>)
 
 ## 🛠️ Technology Stack
 - Frontend: **Next.js**, **React**, **TypeScript**
@@ -84,7 +84,7 @@ Add below intent-filter into AndroidManifest.xml activity tag:
 Build final APK inside Android Studio
 
 ### 5. Install APK
-Install app.apk on Android device and launch!
+Install `app.apk` on Android device and launch!
 
 > [!TIP]
 > Click any map marker to auto-center and auto-position the map view onto selected user location 🎯
