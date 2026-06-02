@@ -53,22 +53,22 @@ A cross-platform real-time location sharing application built for Web and Androi
 Fill all required secret keys inside .env.local  
 
 ### 2. Run Web Dev Mode 💻
-Uncomment `output: export` in `next.config.ts`  
+Uncomment `output: export` in `/next.config.ts`  
 `pnpm dev`  
 
 ### 3. Build for Web Production 🌐
-Prepare SSL `certs/` (cert + key file)  
-Uncomment `output: export` in `next.config.ts`  
+Prepare SSL `certs/` (cert + key file) in root directory for `/server.js`  
+Uncomment `output: export` in `/next.config.ts`  
 `pnpm build`  
 `pnpm start`  
 
 ### 4. Build Android APK 📱
-Comment `output: export` in `next.config.ts`  
+Comment `output: export` in `/next.config.ts`  
 `pnpm build`  
 `pnpm cap add android`  
 `pnpm cap sync`  
 
-Add below intent-filter into AndroidManifest.xml activity tag:
+Add below intent-filter into `android/app/src/main/AndroidManifest.xml` activity tag:
 ```xml
 <intent-filter android:autoVerify="true">
     <action android:name="android.intent.action.VIEW"/>
@@ -81,7 +81,7 @@ Add below intent-filter into AndroidManifest.xml activity tag:
 `pnpm cap open android`  
 Build final APK inside Android Studio  
 
-### 5. Install APK
+### 5. Install APK (Recommended)
 Install `app.apk` on Android device and launch!  
 
 > [!TIP]
