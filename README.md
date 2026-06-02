@@ -48,19 +48,20 @@ A cross-platform real-time location sharing application built for Web and Androi
 
 ## ⚙️ Project Startup Guide
 ### 1. Environment setup
-`pnpm i`
-`cp .env.example .env.local`
-Fill all required secret keys inside .env.local
+`pnpm i`  
+`cp .env.example .env.local`  
+Fill all required secret keys inside .env.local  
+Disable export output in config  
 
 ### 2. Run Web Dev Mode 💻
-`pnpm dev`
+`pnpm dev`  
 
 ### 3. Build for Web Production 🌐
-`pnpm i`
-Prepare SSL cert (cert + key file)
-Comment export output in project config
-`pnpm build`
-`pnpm start`
+`pnpm i`  
+Prepare SSL cert (cert + key file)  
+Comment export output in project config  
+`pnpm build`  
+`pnpm start`  
 
 ### 4. Build Android APK 📱
 `pnpm i`  
@@ -81,10 +82,10 @@ Add below intent-filter into AndroidManifest.xml activity tag:
 ```
 
 `pnpm cap open android`  
-Build final APK inside Android Studio
+Build final APK inside Android Studio  
 
 ### 5. Install APK
-Install `app.apk` on Android device and launch!
+Install `app.apk` on Android device and launch!  
 
 > [!TIP]
 > Click any map marker to auto-center and auto-position the map view onto selected user location 🎯
