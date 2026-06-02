@@ -1,0 +1,56 @@
+@import "tailwindcss";
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-dm-sans);
+  --font-mono: var(--font-dm-sans);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-dm-sans);
+}
+
+.amap-logo,
+.amap-copyright {
+  display: none !important;
+}
+
+.marker {
+  pointer-events: none;
+
+  img {
+    opacity: .6;
+    transition: .3s;
+  }
+
+  .name,
+  .info {
+    opacity: 0;
+    transition: .3s;
+  }
+
+  &.active {
+    z-index: 200 !important;
+
+    img,
+    .name,
+    .info {
+      opacity: 1;
+    }
+  }
+}
