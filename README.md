@@ -51,22 +51,19 @@ A cross-platform real-time location sharing application built for Web and Androi
 `pnpm i`  
 `cp .env.example .env.local`  
 Fill all required secret keys inside .env.local  
-Disable export output in config  
 
 ### 2. Run Web Dev Mode 💻
+Uncomment `output: export` in `next.config.ts`  
 `pnpm dev`  
 
 ### 3. Build for Web Production 🌐
-`pnpm i`  
-Prepare SSL cert (cert + key file)  
-Comment export output in project config  
+Prepare SSL `certs/` (cert + key file)  
+Uncomment `output: export` in `next.config.ts`  
 `pnpm build`  
 `pnpm start`  
 
 ### 4. Build Android APK 📱
-`pnpm i`  
-Configure .env.local  
-Enable export output in config  
+Comment `output: export` in `next.config.ts`  
 `pnpm build`  
 `pnpm cap add android`  
 `pnpm cap sync`  
